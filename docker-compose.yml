@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+  pyspark:
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/opt/workspace
+    environment:
+      - SPARK_MODE=client
